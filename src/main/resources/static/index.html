@@ -1,0 +1,37 @@
+<html ng-app="angularApp">
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script src="https://code.angularjs.org/1.2.13/angular.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+<!-- <script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/angular-ui-router.js"></script> -->
+<script src="app/app.js"></script>
+<script src="app/controller/appController.js"></script>
+<script type="text/javascript" src="app/service/studentService.js"></script>
+</head>
+
+<body >
+
+<!-- NAVIGATION -->
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="navbar-header">
+        <a class="navbar-brand">Welcome To Collage </a>
+    </div>
+    <ul class="nav navbar-nav">
+        <li><a ui-sref="studentAdmissionForm">Admission Form</a></li>
+        <li><a ui-sref="about">About</a></li>
+    </ul>
+</nav>
+<h1>{{name}}</h1>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+    <div ui-view></div>
+
+</div>
+
+</body>
+</html>

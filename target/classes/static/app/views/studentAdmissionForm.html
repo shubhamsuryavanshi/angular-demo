@@ -1,0 +1,110 @@
+
+<div class="container">
+  <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-info btn-lg pull-right" data-toggle="modal" data-target="#myModal">Add New Student</button>
+
+  <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <form name="StudentForm" ng-submit="submitStudent()">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                  <div class="modal-header">
+                      <h4 class="modal-title">Add New Student</h4>
+                  </div>
+                  <div class="modal-body">
+                       <div class="row form-group">
+                          <div class="col-md-6">
+                              <label>Name</label>
+                              <input type="text" ng-model="student.name" class="form-control" placeholder="Name">
+                          </div>
+                          <div class="col-md-3">
+                              <label>Age</label>
+                              <input type="text" ng-model="student.age" class="form-control" placeholder="Age">
+                          </div>
+                          <div class="col-md-3">
+                              <label>Gender</label><br>
+                              <input type="radio" ng-model="student.gender" value="male" > Male
+                              <input type="radio" ng-model="student.gender"  value="female" > Female
+                          </div>
+                       </div>
+                       <!-- <div class="row form-group">
+                          <div class="col-md-6">
+                              <label>Date of Birth</label>
+                              <input type="text" ng-model="dob" class="form-control" placeholder="Date of Birth" >
+                          </div>
+                          
+                       </div> -->
+                       <div class="row form-group">
+                          <div class="col-md-6">
+                              <label>Email ID</label>
+                              <input type="text" ng-model="student.email" class="form-control" placeholder="Email ID" >
+                          </div>
+                          <div class="col-md-6">
+                              <label>City</label>
+                              <input type="text" ng-model="student.city" class="form-control" placeholder="City" >
+                          </div>
+                       </div>
+                       <div class="row form-group">
+                          <div class="col-md-6">
+                              <label>Address</label>
+                              <textarea ng-model="student.address" cols="15" rows="5" class="form-control" placeholder="Address"></textarea>
+                          </div>
+                          <!-- <div class="col-md-6">
+                              <label>Image</label>
+                              <input type="file" ng-model="file" >
+                          </div>-->
+                          <div class="col-md-6">
+                              <label>Mobile No</label>
+                              <input type="text" ng-model="student.mobile" class="form-control" placeholder="Mobile No" >
+                          </div>
+                       </div>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="submit" ng-click="submit()" class="btn btn-primary" >save</button>  <!-- value="{{!ctrl.user.id ? 'Add' : 'Update'}}" -->
+                       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+            </div>
+        </div>
+      </form>
+    </div>
+    <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading"><span class="lead">List of Users </span></div>
+        <div class="panel-body">
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>NAME</th>
+                        <th>AGE</th>
+                        <th>Gender</th>
+                        <th>Email ID</th>
+                        <th>City</th>
+                        <th>Address</th>
+                        <th>Mobile No:</th>
+                        <th colspan="2" >Action</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><button type="button" ng-click="" class="btn btn-primary ">Detail</button>
+                        <button type="button" ng-click="" class="btn btn-success">Edit</button>
+                        <button type="button" ng-click="" class="btn btn-danger">Remove</button></td>
+                    </tr>
+                    </tbody>
+                </table>      
+            </div>
+        </div>
+    </div>
+  
+</div>
