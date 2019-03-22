@@ -88,15 +88,16 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                    <tr ></tr>
+                    <tr ng-repeat = "stud in students">
+                        <td>{{stud.id}}</td>
+                        <td>{{stud.name}}</td>
+                        <td>{{stud.age}}</td>
+                        <td>{{stud.gender}}</td>
+                        <td>{{stud.email}}</td>
+                        <td>{{stud.address}}</td>
+                        <td>{{stud.city}}</td>
+                        <td>{{stud.mobileNo}}</td>
                         <td><button type="button" ng-click="" class="btn btn-primary ">Detail</button>
                         <button type="button" ng-click="" class="btn btn-success">Edit</button>
                         <button type="button" ng-click="" class="btn btn-danger">Remove</button></td>

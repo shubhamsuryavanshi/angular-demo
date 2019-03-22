@@ -7,7 +7,8 @@ angularApp.controller('myController',['$scope','StudentService',function($scope,
 	$scope.students = StudentService.getAllStudents().then(
 		function(success){
 			console.log("i am in controller");
-			console.log($scope.students);
+			$scope.students = success.data.content;
+			console.log(success.data.content);
 		},
 		function(error){
 			console.log(error);
